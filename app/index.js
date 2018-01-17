@@ -1,12 +1,14 @@
-var Generator = require('yeoman-generator');
-module.exports = Generator.extend({
+var generators = require('yeoman-generator');
 
-  constructor: function (args, opts) {
-    Generator.apply(this, arguments);
-    this.argument('appname', { type: String, required: true });
-  },
-
-  end: function() {
-    this.log('Ciao Ciao!');
+module.exports = generators.Base.extend({
+  prompting: function () {
+    return this.prompt({
+      type: 'input',
+      name: 'name',
+      message: 'Your project name',
+      default: 'Hello'
+    }).then(function(answers) {
+      this.log(answers.name); // do stuff with returned answers
+    }.bind(this));
   }
 });

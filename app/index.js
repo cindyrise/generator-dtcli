@@ -1,5 +1,4 @@
-var generators = require('yeoman-generator');
-console.log(generators,11000);
+var generator = require('./generator.js');
 module.exports = generators.Base.extend({
     prompting: function () {
       return this.prompt([{

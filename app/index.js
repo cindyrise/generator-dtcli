@@ -1,14 +1,22 @@
-var generators = require('yeoman-generator');
+'use strict';
+const Generator = require('yeoman-generator');
 
-module.exports = generators.Base.extend({
-  prompting: function () {
-    return this.prompt({
-      type: 'input',
-      name: 'name',
-      message: 'Your project name',
-      default: 'Hello'
-    }).then(function(answers) {
-      this.log(answers.name); // do stuff with returned answers
-    }.bind(this));
+module.exports = class extends Generator {
+  constructor(args, opts) {
+    super(args, opts);
+    this.option('skip-welcome-message', {
+      desc: 'Skips the welcome message',
+      type: Boolean
+    });
+    console.log(this.argument,'argument');
   }
-});
+  prompting(){
+    console.log(1223);
+  }
+  writing(){
+    console.log('write');
+  }
+  end (){
+    console.log("end");
+  }
+}

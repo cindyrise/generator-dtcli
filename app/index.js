@@ -1,18 +1,12 @@
-var generator = require('./generator.js');
-module.exports = generators.Base.extend({
-    prompting: function () {
-      return this.prompt([{
-        type    : 'input',
-        name    : 'name',
-        message : 'Your project name',
-        default : this.appname // Default to current folder name
-      }, {
-        type    : 'confirm',
-        name    : 'cool',
-        message : 'Would you like to enable the Cool feature?'
-      }]).then(function (answers) {
-        this.log('app name', answers.name);
-        this.log('cool feature', answers.cool);
-      }.bind(this));
-    }
-  })
+var Generator = require('yeoman-generator');
+module.exports = Generator.extend({
+
+  constructor: function (args, opts) {
+    Generator.apply(this, arguments);
+    this.argument('appname', { type: String, required: true });
+  },
+
+  end: function() {
+    this.log('Ciao Ciao!');
+  }
+});

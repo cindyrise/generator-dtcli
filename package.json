@@ -1,0 +1,25 @@
+{
+  "name": "generator-dtcli",
+  "version": "1.0.0",
+  "description": "generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cindyrise/generator-dtcli.git"
+  },
+  "keywords": [
+    "generator"
+  ],
+  "author": "charlesyang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cindyrise/generator-dtcli/issues"
+  },
+  "homepage": "https://github.com/cindyrise/generator-dtcli#readme",
+  "dependencies": {
+    "yeoman-generator": "^2.0.2"
+  }
+}

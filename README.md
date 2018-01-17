@@ -1,0 +1,3 @@
+yo 
+
+generator -cli

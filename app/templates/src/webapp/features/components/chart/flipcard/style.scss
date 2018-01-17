@@ -1,0 +1,15 @@
+.dt-flipcard:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+    
+/* The element to be centered, can
+    also be of any width and height */ 
+.centered {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}

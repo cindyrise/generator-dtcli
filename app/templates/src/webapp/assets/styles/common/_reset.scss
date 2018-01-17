@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.f-fr{
+    float: right;
+}
+.f-fl{
+    float: left
+}
+.f-dn{
+  display: none!important;
+}
+.clearfix {
+  zoom: 1;
+  &:after{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+}
+
+.f-mr10 {
+    margin-right: 10px;
+}
+.f-ml10 {
+    margin-left: 10px;
+}
+.f-mr5 {
+  margin-right: 5px;
+}
+.f-ml5 {
+  margin-left: 5px;
+}
+
+.f-pa {
+  position: absolute;
+}
+.f-pr{
+  position: relative;
+}

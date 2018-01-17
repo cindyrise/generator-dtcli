@@ -1,0 +1,15 @@
+@import './common/reset.scss';
+@import './common/variable.scss';
+@import './common/custom.scss';
+@import '../fonts/iconfont.css';
+@import './common/global.scss';
+@import '../../../public/libs/font-awesome-4.6.2/css/font-awesome.min.css';
+
+body{
+  min-width: 1024px;
+  color: $font;
+  background: $bg;
+  font: 12px "Helvetica Neue", Helvetica, "Microsoft YaHei", "open sans",  Arial, sans-serif;
+}
+// :-moz-selection{background:orange; color:#fff;}
+// ::selection {background:orange; color:#fff;}

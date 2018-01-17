@@ -1,0 +1,22 @@
+.noauth_wrap{
+  background-color:#ffffff;
+  margin-top:-30px;
+  padding-top:45px;
+  height:100%;
+  .noauth_box{
+      width:845px;
+      height: 510px;
+      margin:30px auto 30px;
+      padding-top:30px;
+      background:url("../../../assets/images/401_bg.png") center center no-repeat;
+  }
+}
+#j-easylog{
+  height:100%;
+  .ant-layout{
+    height:100%;
+    .noauth-bg{
+      height:100%;
+    }
+  }
+}

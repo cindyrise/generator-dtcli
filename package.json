@@ -14,7 +14,7 @@
     "url": "git+https://github.com/cindyrise/generator-dtcli.git"
   },
   "keywords": [
-    "generator"
+    "yeoman-generator"
   ],
   "author": "charlesyang",
   "license": "ISC",

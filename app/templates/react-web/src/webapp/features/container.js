@@ -23,8 +23,8 @@ import '../assets/styles/main.scss';
 export default class WebApp extends React.Component {
   constructor(props) {
     super(props);
-    // this.props.getNavData({});
-    // this.props.getUserData({});
+    this.props.getNavData({});
+    this.props.getUserData({});
     this.state = {
     };
   }
@@ -32,9 +32,9 @@ export default class WebApp extends React.Component {
   componentDidMount() {
   }
   componentWillReceiveProps(nextProps) {
-    // setTimeout(() => {
-    //   window.dispatchEvent(new Event('resize'));
-    // }, 200)
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 200)
   }
 
   toggleSider = () => {
@@ -48,7 +48,17 @@ export default class WebApp extends React.Component {
     const { children, isFullScreen, theme, navData } = this.props;
     let { pathname, hash } = window.location;
     const { isInIframe, isSiderShow } = this.state;
-    return <Layout>
+    return <Layout
+      style={{ flexDirection: LOGAPICONF.isTopNav ? undefined : 'row' }}
+      className={classnames("g-dashbdapp", {
+        's-fullscreen': isFullScreen,
+        's-dark': theme === 2
+      })}
+    >
+      {
+        LOGAPICONF.isTopNav ? <TopNav {...this.props} /> :
+          <SiderNav curUrl={pathname + hash} navData={navData} isSiderShow={isSiderShow} />
+      }
       {children || 'Ooops! we\'re working on it'}
     </Layout>
   }

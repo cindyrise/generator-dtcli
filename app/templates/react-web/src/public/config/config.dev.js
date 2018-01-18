@@ -1,60 +1,16 @@
 var LOGAPICONF = {
-  navData: [
-    {
-      abbr:"Email",
-      title: "公司邮箱",
-      url: 'http://mail.dtstack.com/'
-    },
-    {
-      abbr:"Gitlab",
-      title: "Git仓库",
-      url: 'http://git.dtstack.cn/'
-    },
-    {
-      abbr:"Confluece",
-      title: "团队知识库",
-      url: "http://confluence.dev.dtstack.cn/"
-    },
-    {
-      abbr:"Nexus",
-      title: "Maven私服",
-      url: 'http://nexus.dev.dtstack.cn/nexus'
-    },
-    {
-      abbr:"Redmine",
-      title: "缺陷管理",
-      url: 'http://redmine.prod.dtstack.cn/'
-    },
-    {
-      abbr:"SonarQube",
-      title: "Quality Gate",
-      url: 'http://172.16.8.229:9000/'
-    },
-    {
-      abbr:"Jenkins",
-      title: "自动化神器",
-      url: 'http://172.16.8.229:8080/'
-    },
-    {
-      abbr:"瓦力部署",
-      title: "部署神器",
-      url: 'http://172.16.10.111/'
-    },
-    {
-      abbr:"API",
-      title: "API管理",
-      url: 'http://172.16.10.111:8989/yongli'
-    },
-    {
-      abbr:"TestLink",
-      title: "测试用例管理",
-      url: 'http://172.16.10.111:8080/testlink/'
-    },
-    {
-      abbr:"ASK",
-      title: "ASK问答",
-      url: 'http://ask.dtstack.cn/'
-    }
-
-  ]
+  isTopNav: true, // 电信版本配置项，主要是去掉顶部导航，所有导航放到左侧
+  isTelecomVersion: false, // 电信版本配置项，主要是去掉顶部导航，所有导航放到左侧
+  APP_DOMAIN: '.dtstack.net', // 云日志部署的域
+  APP_UIC_HOST: '//dtuic.test.dtstack.net:85/', // uic的host
+  LOGINURL: '//dtuic.test.dtstack.net:85/', // 登录跳转地址
+  FOOTER_RIGHT: (new Date()).getFullYear() + ' 杭州玳数科技有限公司 浙ICP备15044486号-1', // 统一页脚版权文案
+  LOGSTATICVERSION: 'v1', // 标示云日志部署版本，运维同学可以根据情况自行定义
+  COMPANYLOGO: 'img/yunrizhi_03.svg', // 日志logo
+  LIVETAIL_HOST: 'log.dev.dtstack.net', // 实时websocket地址，必填
+  LIVETAIL_PORT: 8854, // 实时websocket端口，必填
+  LOG_SERVER_HOST: '172.16.10.115', // logservie地址，必配，且不要http://
+  AGENT_MANAGE_HOST: 'log.dev.dtstack.net', // agent管控api，必配，且不要http://
+  AGENT_MANAGE_PORT: '8854', // agent管控api，必配
+  TIME_RANGE_LIMIT: 7 // 时间选择控件限定时间范围，单位:天，没有限定可设置成false
 }

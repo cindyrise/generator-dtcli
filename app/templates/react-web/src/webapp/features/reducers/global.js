@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import assign from 'object-assign';
 import { globalType } from '../constants/actionTypes';
 const initialState = {
-  userData: {name:'test'},
+  userData: {name:''},
   navData: [],
 };
 export const globalReducer = (state = initialState, action) => {

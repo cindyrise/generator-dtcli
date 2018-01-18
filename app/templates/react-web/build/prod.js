@@ -18,6 +18,7 @@ let ENV = process.env.npm_lifecycle_event;
 let isTest = ENV === 'test' || ENV === 'test-watch';
 let isProd = ENV === 'build';
 let extractCSS = new ExtractTextPlugin('[name].bundle.css');
+console.log(ENV, 99000);
 module.exports = function makeWebpackConfig() {
   /**
    * Config
@@ -115,8 +116,7 @@ module.exports = function makeWebpackConfig() {
         chunks: ['vendor', 'webapp'],
         assets: {
           favicon: 'img/favicon.ico',
-          config_js: 'config/config.js',
-          title:"袋鼠云内部网址导航"
+          config_js: 'config/config.js'
         },
         minify: {
           removeComments: true,

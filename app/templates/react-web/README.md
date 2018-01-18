@@ -70,3 +70,16 @@ npm run build
 
 
 ```
+==============================================
+### 使用技巧
+1.新建组件技巧
+```
+ npm run newCom -- comName [-- d]（组件目录）
+```
+1.新建页面技巧
+```
+ 运行 npm run newPage -- pageName
+ 
+ 你会惊奇得发现，与页面相关得actions,redux,routers,contants,api,type 都自动帮你生成
+
+```

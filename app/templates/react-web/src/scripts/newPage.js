@@ -1,16 +1,3 @@
-const rimraf = require('rimraf');
-const fs = require('fs');
-const path = require('path');
-const exec = require('child_process').exec;
-const spawn = require('child_process').spawn;
-const curPath = path.resolve('./');
-const log = console.log;
-const error = console.error;
-const argv = require('minimist')(process.argv.slice(2));
-const chalk = require('chalk');
-// let ins.tplDir = path.join(__dirname, '../template/');
-// let ins.pageDir = path.join(__dirname, '../webapp/features/');
-
 const ins = require('./new');
 const serverConfig = require('../../build/server');
 let reducerDir = ins.path.join(__dirname, '../webapp/features/reducers/');
@@ -25,7 +12,7 @@ if (routerContent.indexOf(ins.smallCamel) > -1) {
   return;
 }
 let routerPath = "<Route path='" + ins.smallCamel + "' component={" + ins.bigCamel + "}></Route>";
-routerContent = routerContent.replace(/(import .* from .*;)([\s\n]*const)/, "$1\nimport " + ins.bigCamel + " from \'./pages/" + argv._[0] + "\';$2")
+routerContent = routerContent.replace(/(import .* from .*;)([\s\n]*const)/, "$1\nimport " + ins.bigCamel + " from \'./pages/" + ins.smallCamel + "\';$2")
   .replace(/(<IndexRoute component={Home}><\/IndexRoute>)/g, "$1\n  " + routerPath);
 ins.fs.writeFileSync(routerFile, routerContent);
 
@@ -49,10 +36,12 @@ ins.fs.writeFileSync(ins.path.join(ins.pageDir, 'actions/' + ins.smallCamel + 'A
 //新建reducers
 let reducerFragPath = ins.path.join(reducerDir, 'index.js');
 let reducerFragContent = ins.fs.readFileSync(reducerFragPath, "utf-8");
-let reducerImport = "import {" + ins.smallCamel + "Reducer } from '\.\/" + ins.smallCamel + "'";
-reducerFragContent = reducerFragContent.replace(/(import .* from .*;)([\s\n]*const appReducer)/g, "$1\n" + reducerImport + ";$2")
+let reducerImport = "import { " + ins.smallCamel + "Reducer } from '\.\/" + ins.smallCamel + "'";
+
+reducerFragContent = reducerFragContent.replace(/(import .* from .*;)([\n]*const)/, "$1\n" + reducerImport + ";$2")
   .replace(/([\s\n]}\);)/g, "\n ," + ins.smallCamel + ":" + ins.smallCamel + "Reducer$1");
-ins.fs.writeFileSync(reducerFragPath, reducerFragContent);
+  console.log(reducerFragContent);
+ ins.fs.writeFileSync(reducerFragPath, reducerFragContent);
 
 let reducerFile = ins.path.join(ins.tplDir, 'reducer.js');
 let reducerContent = ins.fs.readFileSync(reducerFile, "utf-8").replace(/smallCamel/g, ins.smallCamel)

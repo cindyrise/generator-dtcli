@@ -11,10 +11,11 @@ if (ins.argv._.length <2) {
   ins.fs.writeFileSync(ins.path.join(ins.pageDir, 'components/' + ins.smallCamel + '.js'), comContent);
   return;
 };
+
+//新建文件夹或者文件
 ins.fs.mkdirSync(ins.path.join(ins.pageDir, 'components/' + ins.smallCamel));
 ins.fs.writeFileSync(ins.path.join(ins.pageDir, 'components/' + ins.smallCamel + '/index.js'), comContent);
 ins.log(ins.chalk.bgBlue(ins.chalk.white(`新建组件${ins.bigCamel}成功`)));
-//新建文件夹或者文件
 
 
 

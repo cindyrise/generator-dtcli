@@ -136,8 +136,7 @@ module.exports = function makeWebpackConfig() {
         showErrors: true,
         assets: {
           favicon: 'img/favicon.ico',
-          config_js: 'config/config.dev.js',
-          title:"袋鼠云内部网址导航"
+          config_js: 'config/config.dev.js'
         }
       }),
       new webpack.HotModuleReplacementPlugin(),

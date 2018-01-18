@@ -44,6 +44,9 @@ module.exports = class extends Generator {
     let from='./react-web',to='';
     if(this.includeWeb){
       from ='./react-web';
+      this.fs.copy(this.templatePath(from+'/.babelrc'),this.destinationPath(".babelrc"));
+      this.fs.copy(this.templatePath(from+'/.gitignore'),this.destinationPath(".gitignore"));
+      this.fs.copy(this.templatePath(from+'/.editorconfig'),this.destinationPath(".editorconfig"));
     }
     if(this.includeApollo){
       from ='./react-apollo';

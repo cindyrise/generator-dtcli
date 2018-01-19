@@ -47,9 +47,11 @@ module.exports = class extends Generator {
     }
     if(this.includeApollo){
       from ='./react-apollo';
+      console.log('敬请期待');
     }
     if(this.includeMobile){
       from='./react-mobile'
+      console.log('敬请期待');
     }
     this.fs.copy(this.templatePath(from),this.destinationPath(to));
     this.fs.copy(this.templatePath('./hide-file/_babelrc'),this.destinationPath(".babelrc"));

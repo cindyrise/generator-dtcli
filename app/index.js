@@ -44,9 +44,6 @@ module.exports = class extends Generator {
     let from='./react-web',to='';
     if(this.includeWeb){
       from ='./react-web';
-      this.fs.copy(this.templatePath(from+'/.babelrc'),this.destinationPath(".babelrc"));
-      this.fs.copy(this.templatePath(from+'/.gitignore'),this.destinationPath(".gitignore"));
-      this.fs.copy(this.templatePath(from+'/.editorconfig'),this.destinationPath(".editorconfig"));
     }
     if(this.includeApollo){
       from ='./react-apollo';
@@ -55,7 +52,9 @@ module.exports = class extends Generator {
       from='./react-mobile'
     }
     this.fs.copy(this.templatePath(from),this.destinationPath(to));
-    console.log('移动成功');
+    this.fs.copy(this.templatePath('./hide-file/_babelrc'),this.destinationPath(".babelrc"));
+    this.fs.copy(this.templatePath('./hide-file/_gitignore'),this.destinationPath(".gitignore"));
+    this.fs.copy(this.templatePath('./hide-file/_editorconfig'),this.destinationPath(".editorconfig"));
   }
   end() {
     console.log("end");

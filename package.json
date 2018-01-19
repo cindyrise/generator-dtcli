@@ -14,7 +14,11 @@
     "url": "git+https://github.com/cindyrise/generator-dtcli.git"
   },
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "web",
+    "app",
+    "front-end",
+    "h5bp"
   ],
   "author": "charlesyang",
   "license": "ISC",

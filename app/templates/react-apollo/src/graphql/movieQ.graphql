@@ -1,0 +1,9 @@
+ {
+  Movie(id: "cixos5gtq0ogi0126tvekxo27") {
+    id
+    title
+    actors {
+       name
+    }
+  }
+}

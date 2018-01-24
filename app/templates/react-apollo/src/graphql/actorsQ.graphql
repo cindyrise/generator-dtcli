@@ -1,0 +1,10 @@
+query queryActor($id: ID,$name:String) {
+  Actor(id:$id,name:$name){
+    name
+    id
+    movies{
+      title
+      id
+    }
+  }
+}

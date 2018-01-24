@@ -1,0 +1,30 @@
+
+.core-index{
+    padding:15px 0;
+    background: #fff;
+    color:#333;
+    .am-flexbox-item{
+    text-align: center;
+    border-right:1px solid #eee;
+    }
+    .am-flexbox .am-flexbox-item:first-child {
+        margin-left: 0;
+    }
+    .am-flexbox-item:last-child{
+        border-right:0px;
+    }
+    .core-des{
+        font-size:12px;
+    }
+    .core-figure{
+        margin:10px 0px;
+        font-size:24px;
+    }
+    .core-percent{
+        font-size:12px;
+        color: #EE0000;
+        .percent-des{
+            color: #9EABB2;
+        }
+    }
+}

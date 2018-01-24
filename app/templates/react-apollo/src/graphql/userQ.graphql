@@ -1,0 +1,6 @@
+{
+  users:allUsers (filter:{name_contains:"man"}) {
+    id
+    name
+  }
+}

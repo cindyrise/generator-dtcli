@@ -1,0 +1,29 @@
+
+.search-content{
+    min-height: 580px;
+    background:#fff;
+    .am-search-input{
+    background:#eee;
+    }
+    .am-search{
+        background:#fff;
+    }
+    .book{
+        padding-left:15px;
+        padding-right:15px;
+        margin-top:-10px;
+        .book-list{
+            height:40px;
+            text-align:left;
+            line-height: 40px;
+            border-bottom:1px solid #eee;
+            font-size:16px;
+            list-style: none;
+        }
+    }
+    .nav-search{
+        .am-search-cancel-show{
+            display: none;
+        }
+    }
+}

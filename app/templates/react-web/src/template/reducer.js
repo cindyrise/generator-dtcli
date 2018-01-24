@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import assign from 'object-assign';
-import { smallCamelType } from '../../constants/actionTypes';
+import { smallCamelType } from './actionType';
 const initialState = {
   smallCamelData: []
 };

@@ -3,11 +3,8 @@
 node_modules*
 static*
 npm-debug.log
-/src/app/config.js*
 dist/*
 idea/
 /.vscode/
-／src／public／config/config.dev.js
-compiler_ts/*
 .history/
-true?{\"compact\":false}/
+/test

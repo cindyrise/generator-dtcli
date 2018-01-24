@@ -12,7 +12,7 @@ const error = console.error;
 const argv = require('minimist')(process.argv.slice(2));
 const chalk = require('chalk');
 const tplDir = path.join(__dirname, '../template/');
-const pageDir = path.join(__dirname, '../webapp/features/');
+const appDir = path.join(__dirname, '../webapp/');
 const bigCamel = (argv._[0] || '').replace(/\b(\w)(\w*)/g, ($0, $1, $2) => {
   return $1.toUpperCase() + $2;
 });
@@ -30,7 +30,7 @@ module.exports = {
   argv: argv,
   chalk: chalk,
   tplDir: tplDir,
-  pageDir:pageDir,
+  appDir:appDir,
   bigCamel: bigCamel,
   smallCamel:smallCamel
 }

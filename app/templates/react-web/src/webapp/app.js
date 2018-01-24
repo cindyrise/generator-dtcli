@@ -4,15 +4,15 @@ import { Provider } from 'react-redux';
 import { Router, hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
-import configureStore from './features/configureStore';
-import routers from './features/routers';
+import configStore from './configStore';
+import Routers from './routers';
 
-const store = configureStore();
+const store = configStore();
 const history = syncHistoryWithStore(hashHistory, store);
 
 render(
     <Provider store={ store }>
-      <Router routes={ routers } history={ history } />
+      <Router routes={ Routers } history={ history } />
     </Provider>,
     document.getElementById('j-webapp')
 );

@@ -1,4 +1,4 @@
-import { smallCamelType } from '../constants/actionTypes';
+import { smallCamelType } from './actionType';
 import { message } from 'antd';
 import ajax from '../../api/global';
 export const smallCamelAction = {

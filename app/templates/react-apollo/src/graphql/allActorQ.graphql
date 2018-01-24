@@ -1,0 +1,10 @@
+ {
+  allActors{
+    name
+    id
+    movies{
+      title
+      id
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.y-lable{
+    font-size: 10px;
+    text-align: left;
+    text-indent: 8px;
+    margin-top: 5px;
+}
+.chart-container{
+    overflow: hidden;
+    //height:200px;
+}
+.pie-container{
+     position: relative;
+    .pie-text{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        width:100%;
+        font-size:15px;
+        color:#000;
+    }
+}
+.pie-legend{
+    text-align: center;
+    padding-top:5px;
+    padding-bottom: 20px;
+    font-size:14px;
+    color:#000;
+    span{
+        display: inline-block;
+        width:25px;
+    }
+}
+
+.biax-unit{
+ font-size:12px;
+ padding-top:10px;
+  div:nth-child(1){
+   text-align:left;
+ }
+ div:nth-child(2){
+    text-align:right;
+  }
+}
+
+.biax-legend{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size:12px;
+    span:nth-child(1)::before{
+     content:"● ";
+     color:#1A76D2;
+    }
+    span:last-child::before{
+        content:"● ";
+        color:#26DAD2;
+    }
+}

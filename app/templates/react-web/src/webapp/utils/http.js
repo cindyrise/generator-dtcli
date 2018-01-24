@@ -1,6 +1,6 @@
 import 'whatwg-fetch'
 import { reqHeader, authBeforeRes, authAfterRes } from '../interceptor'
-import ProgressBar from '../features/components/progress-bar';
+import ProgressBar from '../components/progress-bar';
 class Http {
   get(url, params) { // GET请求
     let options = { method: 'GET' }

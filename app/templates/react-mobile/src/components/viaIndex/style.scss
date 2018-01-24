@@ -1,0 +1,48 @@
+
+.core-index{
+    padding:15px 0;
+    background: #fff;
+    color:#333;
+    .am-flexbox-item{
+    text-align: center;
+    border-right:1px solid #eee;
+    }
+    .am-flexbox .am-flexbox-item:first-child {
+        margin-left: 0;
+    }
+    .am-flexbox-item:last-child{
+        border-right:0px;
+    }
+    .core-des{
+        font-size:12px;
+    }
+    .core-figure{
+        margin:10px 0px;
+        font-size:24px;
+    }
+    .core-percent{
+        font-size:12px;
+        color: #EE0000;
+        .percent-des{
+            color: #9EABB2;
+        }
+    }
+    .triangle-up {
+        margin:2px 2px;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 6px solid red;
+    }
+    .triangle-down {
+        margin:1px 2px;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid red;
+    }
+}

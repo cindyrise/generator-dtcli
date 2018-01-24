@@ -1,0 +1,22 @@
+.th-header{
+    font-size:14px;
+    height:40px;
+    border:1px solid #eee; 
+    color: #888888;
+    background: #F5F5F5;
+   }
+   .tb-body{
+       font-size:15px;
+       height:40px;
+       color: #888888;
+       background: #fff;
+       .td-title{
+           overflow: hidden;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+       }
+       a{
+           color: #1A76D2;
+           min-width:60px;
+       }
+   }

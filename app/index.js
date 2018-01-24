@@ -44,19 +44,19 @@ module.exports = class extends Generator {
     let from='./react-web',to='';
     if(this.includeWeb){
       from ='./react-web';
+      this.fs.copy(this.templatePath('./hide-file/pc_babelrc'),this.destinationPath(".babelrc"));
+      this.fs.copy(this.templatePath('./hide-file/pc_gitignore'),this.destinationPath(".gitignore"));
     }
     if(this.includeApollo){
       from ='./react-apollo';
-      console.log('敬请期待');
+      this.fs.copy(this.templatePath('./hide-file/apollo_babelrc'),this.destinationPath(".babelrc"));
     }
     if(this.includeMobile){
-      from='./react-mobile'
-      console.log('敬请期待');
+      from='./react-mobile';
+      this.fs.copy(this.templatePath('./hide-file/mobile_babelrc'),this.destinationPath(".babelrc"));
     }
     this.fs.copy(this.templatePath(from),this.destinationPath(to));
-    this.fs.copy(this.templatePath('./hide-file/_babelrc'),this.destinationPath(".babelrc"));
     this.fs.copy(this.templatePath('./hide-file/_gitignore'),this.destinationPath(".gitignore"));
-    this.fs.copy(this.templatePath('./hide-file/_editorconfig'),this.destinationPath(".editorconfig"));
   }
   end() {
     console.log("end");

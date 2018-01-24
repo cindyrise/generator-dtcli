@@ -13,14 +13,14 @@
 * 运行脚本命令
 ```
 
-   sudo npm install generator-dtcli -g            
+   sudo npm install generator-dtcli -g                  
 
 ```
 * 查看本地脚手架  
 
 ```
 
-   yo --generators                                     
+   yo --generators                                          
 
 ```
 * 新建本地脚手架

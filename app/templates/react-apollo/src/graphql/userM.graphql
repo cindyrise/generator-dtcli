@@ -1,5 +1,0 @@
-mutation{
-  createUser(name:"huanxong,sgse"){
-    name
-  }
-}

@@ -27,6 +27,11 @@
 
 ```
 
-   yo 脚手架名 （根据提示建相应的脚手架哦)                    
+   yo 脚手架名 （根据提示生成脚手架)                                      
 
 ```
+### 使用技巧 
+  ```
+  npm run getScafflod -- [pc ,mobile ,apollo]                         
+  选择要安装的脚手架，目前支持 pc,mobile,apollo ;                                            
+  ```

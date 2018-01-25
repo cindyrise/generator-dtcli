@@ -32,6 +32,7 @@
 ```
 ### 使用技巧 
   ```
-  npm run getScafflod -- [pc ,mobile ,apollo]                         
+  npm run getScafflod -- [pc ,mobile ,apollo] 
+                          
   选择要安装的脚手架，目前支持 pc,mobile,apollo ;                                            
   ```

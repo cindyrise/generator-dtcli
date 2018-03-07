@@ -1,6 +1,6 @@
 {
   "name": "generator-dtcli",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "generator",
   "main": "app/index.js",
   "scripts": {

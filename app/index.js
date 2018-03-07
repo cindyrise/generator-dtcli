@@ -41,7 +41,7 @@ module.exports = class extends Generator {
     console.log(this.includeWeb,this.includeApollo,this.includeMobile);
     let from='./pc-scaffold',to='';
     if(this.includeWeb){
-      from ='./react-web';
+      from ='./pc-scaffold';
       this.fs.copy(this.templatePath('./hide-file/pc_babelrc'),this.destinationPath(".babelrc"));
       this.fs.copy(this.templatePath('./hide-file/_gitignore'),this.destinationPath(".gitignore"));
     }

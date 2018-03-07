@@ -39,40 +39,12 @@ http://127.0.0.1:8080
 npm run build
 
 ```
-
-===========================================
-
-#### 项目结构
-
-```text
-├── build //webpack各种环境打包配置
-├── mock //测试数据，模拟api接口
-├── dist //打包后文件存放文件夹
-├── src //项目的主要目录
-│     │     ├── public //全局公共资源
-│     │     │     ├── config //全局应用配置信息
-│     │     │     ├── fonts //全局字体目录
-│     │     │     ├── img //全局静态图片目录
-│     │     │     ├── lib //全局js类库地址
-│     │     │     ├── page //应用模版文件存放地址
-│     │     │     └──  index.html //开发环境更改初始路由
-│     │     └── webapp //webapp目录
-│     │     │     ├── api //功能模块对应ajax请求方法
-│     │     │     ├── assets //此应用对应的静态资源
-│     │     │     ├── config //应用根据系统环境选择不同配置文件
-│     │     │     ├── pages //页面
-│     │     │     ├── layout //模板页面
-│     │     │     ├── constants //全局常量
-│     │     │     ├── components //全局公用组件
-│     │     │     ├── utils //提供一些小工具
-│     │     │     ├── app.js //应用的入口
-│     │     │     └── interceptor.js //发出异步请求拦截器
-│     │     └── script //脚本目录
-├── .babelrc //babel相关配置
-└── package.json //node相关环境的配置文件
-
+5、code编写规则及行为规范请参考
+```
+https://github.com/cindyrise/doc.git
 
 ```
+
 ==============================================
 ### 使用技巧
 
@@ -92,5 +64,37 @@ npm run build
 ```
 3.组织规范
 ```
- 参考home主页代码规范 
+https://github.com/cindyrise/doc.git
+
+```
+
+===========================================
+
+
+#### 项目结构
+
+```text
+├── build //webpack各种环境打包配置
+├── mock //测试数据，模拟api接口
+├── dist //打包后文件存放文件夹
+├── config //应用根据系统环境选择不同配置文件
+├── src //项目的主要目录
+│     │     └── webapp //webapp目录
+│     │     │     ├── api //功能模块对应ajax请求方法
+│     │     │     ├── assets //此应用对应的静态资源
+│     │     │     │     ├── img //全局静态图片目录
+│     │     │     │     ├── fonts //全局字体目录
+│     │     │     │     ├── lib //全局js类库地址
+│     │     │     ├── pages //页面
+│     │     │     ├── layout //模板页面
+│     │     │     ├── constants //全局常量
+│     │     │     ├── components //全局公用组件
+│     │     │     ├── utils //提供一些小工具
+│     │     │     ├── app.js //应用的入口
+│     │     │     └── interceptor.js //发出异步请求拦截器
+│     │     └── script //脚本目录
+├── .babelrc //babel相关配置
+└── package.json //node相关环境的配置文件
+
+
 ```

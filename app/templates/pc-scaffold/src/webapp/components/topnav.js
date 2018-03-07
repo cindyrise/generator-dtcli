@@ -74,16 +74,16 @@ export default class TopNav extends React.Component {
 
     const helpMenu = (<Menu style={{ left: -15 }}>
       <Menu.Item>
-        <a href="/easylog.html#/contact">联系我们</a>
+        <a href="/webapp.html#/contact">联系我们</a>
       </Menu.Item>
       <Menu.Item>
-      <a href="/easylog.html#/contact">帮助文档</a>
+      <a href="/webapp.html#/contact">帮助文档</a>
       </Menu.Item>
     </Menu>)
 
     return <Header className="m-header">
       <div className="logo">
-        <a href="/easylog.html#/home">
+        <a href="/webapp.html#/home">
           <img src={ LOGAPICONF.COMPANYLOGO } alt="EasyLogo"/>
         </a>
       </div>

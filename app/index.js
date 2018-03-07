@@ -31,7 +31,7 @@ module.exports = class extends Generator {
     }];
     return this.prompt(prompts).then(answers => {
       const libs = answers.libs;
-      const hasLibs = flag => libs && !libs.includes(flag);
+      const hasLibs = flag => libs && libs.includes(flag);
       this.includeWeb = hasLibs('pc');
       this.includeApollo = hasLibs('apollo');
       this.includeMobile = hasLibs('mobile');

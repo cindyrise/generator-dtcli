@@ -14,6 +14,11 @@ export const global = (state = initialState, action) => {
                 ...state,
                 navTitle: payload
             }
+            case "CUR_NAV_TITLE":
+            return {
+                ...state,
+                navTitle: payload
+            }
             case globalAction.GET_PUBLISH_GROUP:
             return {
                 ...state,

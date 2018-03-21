@@ -52,7 +52,7 @@ export default class Home extends Component {
               textAlign: "center"
             }}
           >
-           恭喜，home主页新建成功,DIY YOUE CODE !!!. 
+           恭喜，home主页新建成功,DIY YOUE CODE!!!. 
           </div>
       </Layout>
     );

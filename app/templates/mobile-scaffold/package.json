@@ -3,11 +3,8 @@
   "version": "1.2.2",
   "description": "",
   "scripts": {
-    "lint": "eslint src",
     "build": "rimraf dist && webpack --progress --hide-modules --config webpack.config.js",
-    "start": "node webpack.dev.config.js",
-    "redev": "node ./build/dev.js",
-    "test": "jest"
+    "start": "node webpack.dev.config.js"
   },
   "repository": {
     "type": "gitLab",
@@ -66,6 +63,7 @@
     "fastclick": "^1.0.6",
     "history": "^4.6.1",
     "http-proxy-middleware": "^0.17.4",
+    "immutable": "^3.8.2",
     "jroll": "^2.5.0",
     "moment": "^2.19.3",
     "node-sass": "^4.7.2",

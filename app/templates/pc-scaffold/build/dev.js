@@ -22,9 +22,8 @@ let extractCSS = new ExtractTextPlugin('[name].bundle.css');
 module.exports = function makeWebpackConfig() {
   let config = {};
   config.entry = isTest ? {} : {
-    vendor: ['react', 'react-dom', 'react-router', 'react-color',
-      'moment', 'react-ace', 'd3', 'recharts', 'lodash'
-    ],
+    vendor: ['react', 'react-dom', 'react-router',
+      'moment'],
     webapp: [
       'react-hot-loader/patch',
       `webpack-dev-server/client?http://${serverConfig.host}:${serverConfig.port}`,
@@ -35,7 +34,6 @@ module.exports = function makeWebpackConfig() {
 
   config.output = isTest ? {} : {
     path: rootPath,
-    publicPath: '/',
     filename: isProd ? '[name].bundle.js' : '[name].bundle.js',
     chunkFilename: isProd ? '[name].bundle.js' : '[name].bundle.js',
     sourceMapFilename: '[name].map'

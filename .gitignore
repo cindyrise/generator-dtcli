@@ -9,4 +9,3 @@ publish.sh
 pendingtest
 .nyc_output
 react-dtui
-build

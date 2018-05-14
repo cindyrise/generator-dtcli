@@ -1,11 +1,11 @@
 {
   "name": "generator-dtcli",
-  "version": "1.4.6",
+  "version": "1.4.8",
   "description": "generator",
   "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "getScaffold":"node scripts/getScaffold"
+    "npm":"node scripts/getScaffold"
   },
   "files": [
     "app"

@@ -1,20 +1,22 @@
-import { smallCamelType } from './actionType';
+
+import {smallCamelType} from './constant';
 import { message } from 'antd';
-import ajax from '../../api/global';
-export const smallCamelAction = {
-  getbigCamelData() {
-    return dispatch => {
-      ajax.getbigCamelData().then(res => {
-        const { data, result, result_code, result_message } = res;
-        if (result) {
-          dispatch({
-            type: smallCamelType.GET_TYPE_DATA,
-            payload: data
-          });
-        } else {
-          message.error(result_message);
-        }
-      })
-    }
+import http from '../../utils/http'
+import apiUrl from '../../constants/apis';
+import { browserHistory } from 'react-router';
+const smallCamelData = (data) => ({
+  type: smallCamelType.GET_TYPE_DATA,
+  payload: data
+})
+export const getbigCamelData = (params) => async (dispatch, getState) => {
+  try {
+      let response = await http.get(apiUrl.getUserData, params);
+      if (response.success) {
+          await dispatch(smallCamelData(response.data));
+      } else {
+          //返回失败
+      }
+  } catch (error) {
+      console.log('error: ', error)
   }
 }

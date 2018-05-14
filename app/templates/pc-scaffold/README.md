@@ -1,7 +1,7 @@
-**本项目升级到wepack3最新版，测试通过，快来体验吧！**
+**本项目wepack3，测试通过，快来体验吧！**
 #### 使用技术
 ```text
- 热更新、ES6/7、LESS、Router3、redux、webpack3、async／await、前端node服务器，按需加载...
+ 热更新、ES6/7、LESS、Router4、redux、webpack3、async／await、前端node服务器，按需加载...
 ```
 #### 客户端渲染
 ```
@@ -78,22 +78,21 @@ https://github.com/cindyrise/doc.git
 ├── build //webpack各种环境打包配置
 ├── mock //测试数据，模拟api接口
 ├── dist //打包后文件存放文件夹
-├── config //应用根据系统环境选择不同配置文件
 ├── src //项目的主要目录
 │     │     └── webapp //webapp目录
-│     │     │     ├── api //功能模块对应ajax请求方法
 │     │     │     ├── assets //此应用对应的静态资源
 │     │     │     │     ├── img //全局静态图片目录
 │     │     │     │     ├── fonts //全局字体目录
 │     │     │     │     ├── lib //全局js类库地址
 │     │     │     ├── pages //页面
-│     │     │     ├── layout //模板页面
+│     │     │     ├── tpls //模板页面
 │     │     │     ├── constants //全局常量
 │     │     │     ├── components //全局公用组件
 │     │     │     ├── utils //提供一些小工具
 │     │     │     ├── app.js //应用的入口
-│     │     │     └── interceptor.js //发出异步请求拦截器
+│     │     │     └── routers.js //根路由文件
 │     │     └── script //脚本目录
+├── webapp.ejs //wepack打包模板文件
 ├── .babelrc //babel相关配置
 └── package.json //node相关环境的配置文件
 

@@ -1,23 +1,18 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import { bindActionCreators } from 'redux'
 import { Layout, Menu, Breadcrumb } from "antd";
-import { smallCamelAction } from './action';
 import { isEmpty } from 'lodash';
 import assign from 'object-assign';
 import './style.scss';
-
+import * as smallCamel  from "./action"; 
 const { Header, Content, Footer } = Layout;
-const mapState = state => ({
-  smallCamelData: state.smallCamel.smallCamelData,
-});
-const mapDispatch = dispatch => ({
-  getbigCamelData(params) {
-    dispatch(smallCamel.getbigCamelData(params));
-  },
-});
 
-@connect(mapState, mapDispatch)
+@connect(
+  state => ({ ...state.smallCamel }),
+  dispatch => bindActionCreators({ ...smallCamel}, dispatch)
+)
 export default class bigCamel extends Component {
   constructor(props) {
     super(props);
@@ -33,8 +28,7 @@ export default class bigCamel extends Component {
   }
   render() {
     return (  
-      <Layout className="layout">
-      <div style={{ height: "900px", padding: "20px" }}>
+      <div className="content">
         <div
           style={{
             color: "blue",
@@ -45,8 +39,7 @@ export default class bigCamel extends Component {
         >
          恭喜，bigCamel主页新建成功 , DIY YOUE CODE !!!.   
         </div>
-      </div>
-    </Layout>      
+      </div>     
     )
   }
 }

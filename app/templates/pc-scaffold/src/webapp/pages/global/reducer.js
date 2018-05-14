@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import assign from 'object-assign';
-import { globalType } from './actionType';
+import {globalType} from './constant';
 const initialState = {
   userData: {name:''},
   navData: [],
 };
-export const globalReducer = (state = initialState, action) => {
+ const globalReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
       case globalType.GET_USER_DATA:
@@ -20,3 +20,4 @@ export const globalReducer = (state = initialState, action) => {
       return state;
   }
 };
+export default globalReducer;

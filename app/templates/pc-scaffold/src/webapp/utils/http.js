@@ -1,21 +1,22 @@
 import 'whatwg-fetch'
-import { reqHeader, authBeforeRes, authAfterRes } from '../interceptor'
-import ProgressBar from '../components/progress-bar';
+import { reqHeader, authBeforeRes, authAfterRes } from './interceptor';
+import ProgressBar from '../components/progressBar';
+import {history}from '../app';
+
 class Http {
-  get(url, params) { // GET请求
+  get(url, params) { 
     let options = { method: 'GET' }
     let req_url = params ? this.buildUrl(url, params) : url;
     return this.request(req_url, options)
   }
 
-  post(url, data) { // POST请求
+  post(url, data) { 
     let options = { method: 'POST', headers: { "content-type": "application/json;charset=UTF-8" } }
-    // let options = { method: 'POST' }
     if (data) options.body = JSON.stringify(data)
     return this.request(url, options)
   }
 
-  delete(url, params) { // delete请求
+  delete(url, params) { 
     let options = { method: 'DELETE' }
     let req_url = params ? this.buildUrl(url, params) : url;
     return this.request(req_url, options)
@@ -36,24 +37,7 @@ class Http {
     let options = { method: 'Head' }
     return this.request(url, options)
   }
-
-  request(url, options) {
-    options.headers = options.headers || reqHeader;
-    options.credentials = 'same-origin'
-    ProgressBar.show();
-    return fetch(url, options)
-      .then(authBeforeRes)
-      .then(response => {
-        ProgressBar.hide();
-        return response.json()
-      })
-      .then(authAfterRes)
-      .catch(err => {
-        console.error(url + ":" + err)
-      })
-  }
-
-  buildUrl(url, params) { // URL构建方法
+  buildUrl(url, params) {
     const ps = []
     if (params) {
       for (let p in params) {
@@ -74,6 +58,39 @@ class Http {
         }
       }
       return data;
+    }
+  }
+  request(url, options) {
+    options.headers = options.headers || reqHeader;
+    options.credentials = 'same-origin'
+    ProgressBar.show();
+    return fetch(url, options)
+      .then(authBeforeRes)
+      .then(response => {
+        ProgressBar.hide();
+        return response.json()
+      })
+      .catch(err => {
+        console.error("错误信息：",JSON.stringify(err));
+        this.handleExcept(e);//开发环境可讲此方法注视
+      });
+  }
+  handleExcept(e){
+    const status = e.name;
+    if (status === 401) {
+     window.location.href='/auth/login';
+      return;
+    }
+    if (status === 403) {
+      history.push('/auth/login');
+      return;
+    }
+    if (status <= 504 && status >= 500) {
+      history.push('/auth/login');
+      return;
+    }
+    if (status >= 404 && status < 422) {
+      history.push('/auth/login');
     }
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom"; 
 export default class NoExist extends React.Component {
   render() {
     return <div className="g-404">
@@ -10,7 +11,7 @@ export default class NoExist extends React.Component {
           color: '#ddd',
           marginTop: 80
         }}>404</h3>
-        <p>访问出错，<a href="#/home">点此</a> 返回</p>
+        <p>访问出错，<NavLink to="/auth/login">点此</NavLink> 返回</p>
       </div>
     </div>
   }

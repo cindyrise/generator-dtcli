@@ -1,14 +1,19 @@
-import { combineReducers } from 'redux';
-import { routerReducer as routing } from 'react-router-redux';
-import { globalReducer } from './reducer';
-import { homeReducer } from '../home/reducer';
+import global from './reducer';
+import home from '../home/reducer';
+import auth from '../auth/reducer';
+import userList from  '../user/list/reducer';
 
 
 
-const appReducer = combineReducers({
-  routing,
-  global:globalReducer,
-  home: homeReducer
-});
+const appReducer = {
+  global,
+  home,
+  auth,
+  userList
+};
+	
+	
+	
+	
 
 export default appReducer;
